@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Buku Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Toko Buku Online</h1>
+            <p>Selamat datang! Pilih kategori buku untuk memulai.</p>
+        </header>
+        <main>
+            <!-- Step 1: Pilih Kategori -->
+            <div id="step-1" class="step active">
+                <h2>Pilih Kategori</h2>
+                <div class="categories">
+                    <button onclick="showBooks('Fiksi')">Fiksi</button>
+                    <button onclick="showBooks('Non-Fiksi')">Non-Fiksi</button>
+                    <button onclick="showBooks('Pendidikan')">Pendidikan</button>
+                    <button onclick="showBooks('Teknologi')">Teknologi</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Daftar Buku -->
+            <div id="step-2" class="step hidden">
+                <h2>Daftar Buku <span id="category-name"></span></h2>
+                <div id="book-list"></div>
+                <button class="back-btn" onclick="goBack(1)">Kembali</button>
+            </div>
+
+            <!-- Step 3: Detail Buku -->
+            <div id="step-3" class="step hidden">
+                <h2>Detail Buku</h2>
+                <div id="book-detail"></div>
+                <button class="back-btn" onclick="goBack(2)">Kembali</button>
+            </div>
+
+            <!-- Step 4: Ringkasan Pesanan -->
+            <div id="step-4" class="step hidden">
+                <h2>Ringkasan Pesanan</h2>
+                <div id="order-summary"></div>
+                <button class="back-btn" onclick="goBack(3)">Kembali</button>
+                <button class="confirm-btn" onclick="confirmOrder()">Konfirmasi Pesanan</button>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Toko Buku Online. Semua Hak Dilindungi.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

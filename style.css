@@ -1,0 +1,140 @@
+/* ===== Warna Dasar ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: url('img/bookshelf.jpg') no-repeat center center fixed;
+    background-size: cover; /* Gambar menyesuaikan layar */
+    color: #333; /* Warna teks utama */
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Tampilan Utama ===== */
+h1, h2, h3 {
+    color: #007bff; /* Warna teks judul */
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Warna latar belakang transparan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    border-radius: 10px; /* Sudut membulat */
+}
+
+/* ===== Tombol ===== */
+button {
+    background-color: #007bff; /* Warna tombol utama */
+    color: #fff; /* Warna teks tombol */
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Warna tombol saat hover */
+}
+
+/* Tombol khusus "Kembali" */
+.back-btn {
+    background-color: #ff6b6b; /* Warna merah untuk tombol kembali */
+}
+
+.back-btn:hover {
+    background-color: #d9534f; /* Warna hover tombol kembali */
+}
+
+/* Tombol konfirmasi */
+.confirm-btn {
+    background-color: #28a745; /* Warna hijau untuk tombol konfirmasi */
+}
+
+.confirm-btn:hover {
+    background-color: #218838; /* Warna hover tombol konfirmasi */
+}
+
+/* ===== Step dan Navigasi ===== */
+.step {
+    margin-bottom: 20px;
+}
+
+/* Elemen tersembunyi */
+.hidden {
+    display: none; /* Elemen ini disembunyikan */
+}
+
+.active {
+    display: block; /* Elemen aktif ditampilkan */
+}
+
+/* ===== Kategori Buku ===== */
+.categories button {
+    width: 100%; /* Tombol kategori memenuhi lebar container */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ===== Daftar Buku ===== */
+#book-list div {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antar elemen di dalam daftar buku */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Warna latar belakang item buku */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+#book-list div img {
+    flex-shrink: 0;
+}
+
+/* ===== Detail Buku ===== */
+#book-detail img {
+    width: 100%;
+    max-width: 200px; /* Ukuran maksimal untuk gambar detail */
+    margin: 10px auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan gambar */
+}
+
+/* ===== Ringkasan Pesanan ===== */
+#order-summary p {
+    font-size: 1rem;
+    color: #555; /* Warna teks ringkasan pesanan */
+    margin: 5px 0;
+}
+
+/* ===== Gambar dalam Daftar Buku ===== */
+img {
+    max-width: 150px; /* Ukuran maksimal gambar buku */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 5px; /* Sudut gambar membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan gambar */
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 600px) {
+    .container {
+        width: 100%; /* Lebar penuh untuk layar kecil */
+        padding: 10px;
+    }
+
+    #book-list div {
+        flex-direction: column; /* Tumpuk elemen daftar buku secara vertikal */
+        align-items: center;
+    }
+
+    #book-list div img {
+        max-width: 100px; /* Ukuran lebih kecil untuk layar sempit */
+    }
+}
